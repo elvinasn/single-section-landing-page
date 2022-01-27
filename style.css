@@ -5,21 +5,35 @@
 }
 body{
     min-height: 100vh;
+    background-image: url(images/bg-mobile.svg);
     overflow-x: hidden;
     width: 100vw;
-    background-image: url(images/bg-desktop.svg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: hsl(257, 40%, 49%);
 }
 .logo{
-    margin: 3rem 0 0 4rem;
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 24rem;
+}
+.logo img{
+    width: 50%;
 }
 .container{
     display: flex;
-    margin: 5rem 0 0 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
     width: 75%;
     gap: 3rem;
+    max-width: 24rem;
+    margin-bottom: 3rem;
 }
 .container__image img{
     width: 100%;
@@ -31,13 +45,14 @@ body{
     max-width: 36rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .container__introductory h1{
-    width: 90%;
+    width: 100%;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 2.7rem;
+    font-size: 2rem;
     line-height: 1.5;
     margin-bottom: 1.15rem;
 }
@@ -59,7 +74,7 @@ body{
     width: min-content;
     box-shadow: 0.5rem 0.5rem 1.5rem -0.5rem hsl(257, 40%, 20%);
     transition: 0.4s ease;
-    margin-bottom: 11rem;
+    margin-bottom: 6rem;
 }
 .container__introductory button:hover{
     background-color: hsl(300, 69%, 71%);
@@ -71,7 +86,7 @@ body{
     list-style: none;
     display: flex;
     gap: 0.75rem;
-    align-self:  flex-end;
+    align-self:  center;
     width: fit-content;
 }
 .fab{
@@ -89,28 +104,35 @@ body{
     cursor: pointer;
     transition: 0.4s ease;
 }
-@media all and (max-width:60rem){
+@media all and (min-width:80rem){
     body{
-        background-image: url(images/bg-mobile.svg);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: block;
+        background-image: url(images/bg-desktop.svg);
     }
     .container{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        max-width: 25rem;
+        max-width: initial;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
     }
-    .logo{
-        width: 100%;
-        max-width: 25rem;
+    .logo img{
+        max-width: 100%;
     }
-    .container__introductory h1{
-        width: 100%;
+    .logo, .container{
+        margin-left: 4rem;
     }
     .container__introductory{
-        justify-content: center;
+        align-items: flex-start;
+    }
+    .container__introductory h1{
+        width: 90%;
+        font-size: 2.7rem;
+    }
+    .introductory__icons{
+        align-self: flex-end;
+    }
+    .container__introductory button{
+        margin-bottom: 11rem;
     }
 }
