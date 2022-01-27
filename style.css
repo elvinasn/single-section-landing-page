@@ -94,7 +94,7 @@ body{
     width: 1rem;
     padding: 0.5rem;
     border: 1px solid white;
-    border-radius: 2rem;
+    border-radius: 3rem;
     text-align: center;
     transition: 0.4s ease;
 }
