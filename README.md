@@ -1,1 +1,2 @@
 # single-section-landing-page
+Single section lading page created using HTML and CSS - including flexbox and media query so the page is responsive. Also used scalable units instead of pixels. Live preview: https://elvinasn.github.io/single-section-landing-page/
